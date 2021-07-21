@@ -11,10 +11,10 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
     0 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-}
 
-.backdrop:not(.is-hidden) .modal {
-  transform: translate(-50%, -50%) scale(1);
+  .backdrop:not(.is-hidden) & {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .modal-close-btn {

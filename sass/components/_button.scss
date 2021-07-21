@@ -1,27 +1,27 @@
 .button {
-    display: inline-block;
-    border: none;
-    border-radius: 4px;
-    overflow: hidden;
-    cursor: pointer;
-  }  
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
 
-  .modal-btn {
-    min-width: 200px;
-    min-height: 50px;
-    padding: 10px;
-    font-family: var(--main-font);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-    color: var(--secondary-text-color);
-    background-color: var(--accent-color);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-    transition: background-color 250ms var(--transition);
-  }
+.modal-btn {
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px;
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms var(--transition);
 
-  .modal-btn:hover,
-  .modal-btn:focus {
+  &:hover,
+  &:focus {
     background-color: var(--button-hover-color);
   }
+}

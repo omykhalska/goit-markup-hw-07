@@ -32,15 +32,11 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms var(--transition);
-}
 
-.application-form-input:focus {
-  outline: none;
-  border-color: var(--accent-color);
-}
-
-.application-form-input:focus + .application-form-icon {
-  fill: var(--accent-color);
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
 }
 
 .application-form-icon {
@@ -48,6 +44,10 @@
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
+
+  .application-form-input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 
 .application-form-comment {
@@ -66,18 +66,18 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms var(--transition);
-}
 
-.application-form-textarea:focus {
-  outline: none;
-  border-color: var(--accent-color);
-}
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
 
-.application-form-textarea::placeholder {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .application-form-checkbox-wrap {
@@ -87,31 +87,33 @@
   margin-bottom: 30px;
 }
 
-.application-form-checkbox-label::before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--title-color);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 250ms var(--transition);
-}
+.application-form-checkbox-label {
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 250ms var(--transition);
+  }
 
-.application-form-checkbox:checked + .application-form-checkbox-label::before {
-  background-image: url(../images/icon-check.svg);
-  background-size: contain;
-  background-color: var(--accent-color);
-  background-origin: border-box;
-  border: none;
-}
+  .application-form-checkbox:checked + &::before {
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-color: var(--accent-color);
+    background-origin: border-box;
+    border: none;
+  }
 
-.application-form-checkbox:focus + .application-form-checkbox-label::before {
-  border: 2px solid var(--accent-color);
+  .application-form-checkbox:focus + &::before {
+    border: 2px solid var(--accent-color);
+  }
 }
 
 .accept-policy-link {
