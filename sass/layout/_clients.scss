@@ -15,7 +15,7 @@
   height: 100%;
   border: 1px solid var(--decoration-color);
   border-radius: 4px;
-  transition: border 250ms var(--transition);
+  @include transition(border);
 
   &:hover,
   &:focus {

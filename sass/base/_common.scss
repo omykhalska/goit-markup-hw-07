@@ -18,19 +18,19 @@ body {
 }
 
 .list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
-  .link {
-    text-decoration: none;
-  }
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 
-  .accent {
-    color: var(--accent-color);
-  }
+.link {
+  text-decoration: none;
+}
 
-  .icon {
-    display: block;
-  }
+.icon {
+  display: block;
+}
+
+.accent {
+  color: var(--accent-color);
+}

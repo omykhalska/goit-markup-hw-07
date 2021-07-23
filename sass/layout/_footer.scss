@@ -1,4 +1,4 @@
-.page-footer {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--dark-bg-color);
@@ -17,12 +17,12 @@
   display: inline-block;
   margin-bottom: 20px;
   color: var(--secondary-text-color);
-  transition: color 250ms var(--transition);
+  @include transition(color); 
 }
 
 .footer-address {
   color: var(--secondary-text-color);
-  transition: color 250ms var(--transition);
+  @include transition(color); 
 
   &:focus,
   &:hover {
@@ -40,7 +40,7 @@
 
 .footer-contacts-link {
   color: rgba(255, 255, 255, 0.6);
-  transition: color 250ms var(--transition);
+  @include transition(color);
 
   &:hover,
   &:focus {
@@ -83,7 +83,7 @@
   height: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  transition: background-color 250ms var(--transition);
+  @include transition(background-color);
 
   &:hover,
   &:focus {

@@ -57,12 +57,12 @@ body {
   text-decoration: none;
 }
 
-.accent {
-  color: var(--accent-color);
-}
-
 .icon {
   display: block;
+}
+
+.accent {
+  color: var(--accent-color);
 }
 
 .container {
@@ -73,15 +73,16 @@ body {
   padding-right: 15px;
 }
 
-.button {
-  display: inline-block;
-  border: none;
-  border-radius: 4px;
-  overflow: hidden;
-  cursor: pointer;
+.logo {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--logo-color);
 }
 
-.modal-btn {
+.button {
+  display: inline-block;
   min-width: 200px;
   min-height: 50px;
   padding: 10px;
@@ -92,11 +93,15 @@ body {
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  cursor: pointer;
   transition: background-color 250ms var(--transition);
 }
 
-.modal-btn:hover, .modal-btn:focus {
+.button:hover, .button:focus {
   background-color: var(--button-hover-color);
 }
 
@@ -313,25 +318,14 @@ body {
   text-align: center;
 }
 
-.page-header {
+.header {
   border-bottom: 1px solid var(--border-color);
 }
 
-.header-flex {
+.header__container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.header-logo {
-  color: var(--logo-color);
-}
-
-.logo-font {
-  font-family: var(--secondary-font);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
 }
 
 .navigation {
@@ -346,45 +340,27 @@ body {
   letter-spacing: 0.02em;
 }
 
-.header-contacts {
-  margin-left: auto;
-  display: flex;
-  flex-wrap: wrap;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-.menu-link {
-  display: block;
-  padding: 32px 0;
-  transition: color 250ms var(--transition);
-}
-
-.menu-link:hover, .menu-link:focus {
-  color: var(--accent-color);
-}
-
-.header-contacts-link {
-  display: block;
-  padding: 32px 0;
-  transition: color 250ms var(--transition);
-}
-
-.header-contacts-link:hover, .header-contacts-link:focus {
-  color: var(--accent-color);
-}
-
-.header-contacts-item:not(:first-child),
-.menu-item:not(:first-child) {
+.menu__item:not(:first-child) {
   margin-left: 50px;
 }
 
-.current {
+.menu__link {
+  display: block;
+  padding: 32px 0;
+  color: var(--title-color);
+  transition: color 250ms var(--transition);
+}
+
+.menu__link:hover, .menu__link:focus {
   color: var(--accent-color);
 }
 
-.current::after {
+.menu__link--current {
+  position: relative;
+  color: var(--accent-color);
+}
+
+.menu__link--current::after {
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -395,26 +371,32 @@ body {
   background-color: var(--accent-color);
 }
 
-.menu-link.current {
-  position: relative;
+.header-contacts {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
-.menu-item.current::after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
+.header-contacts__item:not(:first-child) {
+  margin-left: 50px;
 }
 
-.header-contacts-link {
+.header-contacts__link {
   display: flex;
   align-items: center;
+  padding: 32px 0;
   color: inherit;
+  transition: color 250ms var(--transition);
 }
 
-.header-icon {
+.header-contacts__link:hover, .header-contacts__link:focus {
+  color: var(--accent-color);
+}
+
+.header-contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -434,7 +416,7 @@ body {
   text-align: center;
 }
 
-.hero-title {
+.hero__title {
   max-width: 696px;
   margin-left: auto;
   margin-right: auto;
@@ -604,7 +586,7 @@ body {
   fill: var(--accent-color);
 }
 
-.page-footer {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--dark-bg-color);
@@ -748,14 +730,19 @@ body {
 }
 
 .gallery-btn {
+  display: inline-block;
   padding: 6px 22px;
   background-color: var(--light-bg-color);
+  color: var(--title-color);
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
+  border: none;
   border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
   transition: background-color 250ms var(--transition), color 250ms var(--transition), box-shadow 250ms var(--transition);
 }
 
